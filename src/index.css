@@ -1,13 +1,56 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ********** Custom Properties ********** */
+@font-face{
+  font-family: "ember";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/AmazonEmber_Lt.woff")format("woff");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face{
+  font-family: "ember-medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/Amazon-Ember-Medium.woff")format("woff");
+}
+:root{ 
+
+  --step--2: clamp(0.91rem, calc(0.90rem + 0.07vw), 0.96rem);
+  --step--1: clamp(1.09rem, calc(1.06rem + 0.16vw), 1.20rem);
+  --step-0: clamp(1.31rem, calc(1.26rem + 0.28vw), 1.50rem);
+  --step-1: clamp(1.58rem, calc(1.49rem + 0.44vw), 1.88rem);
+  --step-2: clamp(1.89rem, calc(1.76rem + 0.67vw), 2.34rem);
+  --step-3: clamp(2.27rem, calc(2.07rem + 0.98vw), 2.93rem);
+  --step-4: clamp(2.72rem, calc(2.44rem + 1.39vw), 3.66rem);
+  --step-5: clamp(3.27rem, calc(2.88rem + 1.94vw), 4.58rem);
+}
+
+/* ********** Reset ********** */
+html {
+  box-sizing: border-box;
+
+  font-size: 16px;
+  font-family: 'Arsenal', sans-serif;
+  
+  scroll-behavior: smooth;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+body{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+/* ********** Component ********** */
+h2 {
+  font-family: "ember-medium";
 }
