@@ -20,6 +20,8 @@
   --search-font: #b0afaf;
   --search-c : #fcbb6a;
   --bg-deliver : #37475A;
+  --bg-content  : #d5dbdb;
+  --button-sing : #ffd814;
   --step--2: clamp(0.91rem, calc(0.90rem + 0.07vw), 0.96rem);
   --step--1: clamp(1.09rem, calc(1.06rem + 0.16vw), 1.20rem);
   --step-0: clamp(1.31rem, calc(1.26rem + 0.28vw), 1.50rem);
@@ -214,6 +216,101 @@ body{
   margin-left: 4px;
 
   font-size: .85rem;
+}
+
+/*Style Content*/
+.content {
+  min-height: 100vh;
+
+  background-color: var(--bg-content);
+}
+
+/*Styles for refreshHome*/
+.refresh-home {
+  position: relative;
+
+  width: 100%;
+  height: 350px;
+  
+  background-image: url("https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71uIwGsOQpL._SR1236,1080_.jpg");
+  background-size: cover;
+}
+
+.refresh-home-products {
+  position: absolute;
+  
+  width: 100%;
+  margin-top: 236px;
+
+}
+
+.refresh-home-container {
+  position: relative;
+  height: 180px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.refresh-home-carroussel {
+  position: absolute;
+
+  display: flex;
+  height: 180px;
+}
+
+.product {
+
+  width: 135px;
+  height: 180px;
+  margin-left: 10px;
+
+  background-color: var(--header-font-color);
+  border-radius: .2rem;
+}
+
+.product h6 {
+  width: 100%;
+  height: 45px;
+  margin: 0;
+  margin-left: 10px;
+  font-weight: lighter;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.product img {
+  width: 100%;
+  height: 140px;
+  
+}
+
+/*Styles Sing content*/
+.sing-content {
+  width: 100%;
+  height: 150px;
+  margin-top: 75px;
+  background-color: var(--header-font-color);
+  padding: 15px;
+}
+
+.sing-content h4, .sing-content h6{
+  font-weight: lighter;
+}
+
+.sing-content button {
+  width: 100%;
+  height: 45px;
+  border-radius: .7rem;
+  border-color: none;
+  border-width: 0px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+
+  font-size: 1rem;
+  font-weight: 300;
+
+  background-color: var(--button-sing);
 }
 /* ********** Utilities ********** */
 

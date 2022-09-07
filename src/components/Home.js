@@ -10,11 +10,11 @@ const Home = () => {
         </div>
         <div className='header-item'>
           <h6>Sing in</h6>
-          <i class="bi bi-chevron-right"></i>
-          <i class="bi bi-person"></i>
+          <i className="bi bi-chevron-right"></i>
+          <i className="bi bi-person"></i>
           <div className='header-cart'>
             <h6 className='item-cart'>0</h6>
-            <i class="bi bi-cart"></i>
+            <i className="bi bi-cart"></i>
           </div>
         </div>
     </div>
