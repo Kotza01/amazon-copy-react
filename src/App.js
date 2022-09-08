@@ -1,12 +1,11 @@
 import './App.css';
-import Content from './components/Content';
-import Header from './components/Header';
+import Content from './components/Content/Content';
+import Header from './components/Header/Header';
 import {
   QueryClient,
   QueryClientProvider
   } from '@tanstack/react-query';
-import Footer from './components/Footer';
-import RefreshHome from './components/RefreshHome';
+import Footer from './components/Footer/Footer';
 
   const queryClient = new QueryClient();
 

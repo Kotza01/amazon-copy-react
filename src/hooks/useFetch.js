@@ -7,8 +7,6 @@ const fetchData = async(url) => {
     return json;
 }
 
-/**	https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71uIwGsOQpL._SR1236,1080_.jpg */
-
 export const useFetch = (url, name) => {
 
     const { data : results, error, isLoading

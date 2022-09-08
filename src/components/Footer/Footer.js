@@ -1,5 +1,6 @@
 import React from 'react'
-import UsaFlag from '../assets/america-flag.png';
+import UsaFlag from '../../assets/america-flag.png';
+import './Footer.css';
 
 const Footer = () => {
   return (

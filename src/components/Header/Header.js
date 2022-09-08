@@ -3,6 +3,7 @@ import Home from './Home';
 import Search from './Search';
 import Category from './Category';
 import Deliver from './Deliver';
+import './Header.css';
 
 const Header = () => {
   return (

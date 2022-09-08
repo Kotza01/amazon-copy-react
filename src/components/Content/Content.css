@@ -1,0 +1,231 @@
+/*Style Content*/
+.content {
+    min-height: 100vh;
+  
+    background-color: var(--bg-content);
+  }
+  
+  /*Styles for refreshHome*/
+  .refresh-home {
+    position: relative;
+  
+    width: 100%;
+    min-height: 435px;
+    max-height: 700px;
+    display: flex;
+    justify-content: center;
+    
+    background-color: var(--bg-content);
+  }
+  
+  .refresh-home-background {  
+    min-width: 380px;
+    max-width: 414px;
+    min-height: 360px;
+    max-height: 390px;
+  
+    background-image: url("https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71uIwGsOQpL._SR1236,1080_.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .refresh-home-products {
+    position: absolute;
+    
+    width: 100%;
+    margin-top: 236px;
+  
+  }
+  
+  .refresh-home-container {
+    position: relative;
+    height: 180px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  
+  .refresh-home-carroussel {
+    position: absolute;
+  
+    display: flex;
+    height: 180px;
+  }
+  
+  .product {
+  
+    width: 135px;
+    height: 180px;
+    margin-left: 10px;
+  
+    background-color: var(--header-font-color);
+    border-radius: .2rem;
+  }
+  
+  .product h6 {
+    width: 100%;
+    height: 45px;
+    margin: 0;
+    margin-left: 10px;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  }
+  
+  .product img {
+    width: 100%;
+    height: 140px;
+    
+  }
+  
+  /*Styles Sing content*/
+  .content-seccion {
+    width: 100%;
+    height: 150px;
+    background-color: var(--header-font-color);
+    padding: 15px;
+  }
+  
+  .content-sing h4, .content-sing h6{
+    font-weight: lighter;
+  }
+  
+  .content-sing button {
+    width: 100%;
+    height: 45px;
+    border-radius: .7rem;
+    border-color: none;
+    border-width: 0px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  
+    font-size: 1rem;
+    font-weight: 300;
+  
+    background-color: var(--button-sing);
+  }
+  
+  .content-shop {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    padding: 0;
+  
+    background-color: var(--bg-content);
+  }
+  
+  .content-shop img {
+    min-width: 380px;
+    max-width: 414px;
+    height: 150px;
+    margin: 0;
+    border-radius: 0px;
+  }
+  
+  /*Styles for Merchandise Content*/
+  .merchandise-content {
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    padding: 15px;
+    background-color: var(--header-font-color);
+  }
+  
+  .merchandise-products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: center;
+    justify-items: center;
+    gap: 10px;
+  }
+  
+  .merchandise-content h6, .merchandise-content h4 {
+    font-weight: lighter;
+  }
+  
+  /*Style keep exploring*/
+  .keep-exploring-content {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: var(--bg-content);
+  }
+  
+  .keep-exploring-content span {
+    position: absolute;
+    z-index: 2;
+  
+    width: fit-content;
+    margin: 0;
+    margin-bottom: 1px;
+    padding: 0 10px;
+  
+    font-weight: 300;
+    font-size: .8rem;
+    color: #8184a6;
+  
+    background-color: var(--bg-content);
+  }
+  
+  .keep-exploring-line {
+    position: absolute;
+    position: 1;
+    width: 100%;
+    height: 1px;
+    border-top: 0.5px solid #8184a6;
+  }
+  
+  /*Styles Explore Content*/
+  
+  .explore-department-content {
+    width: 100%;
+    padding: 15px;
+  
+    background-color: var(--header-font-color);
+  }
+  
+  .explore-department-products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .explore-department-products img {
+    border-radius: 0;
+  }
+  
+  .explore-department-content h6, 
+  .explore-department-content h4 {
+    font-weight: 200;
+  }
+  
+  /*Style top page*/
+  .top-page-content {
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: var(--bg-2-color);
+  }
+  
+  .top-page-content i {
+    font-size: .7rem;
+    color: var(--bg-content);
+  }
+  
+  .top-page-content h6 {
+    color: var(--bg-content);
+    font-size: .7rem;
+  }

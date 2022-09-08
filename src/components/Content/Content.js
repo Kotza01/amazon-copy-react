@@ -6,6 +6,7 @@ import RefreshHome from './RefreshHome';
 import ShopContent from './ShopContent';
 import SingContent from './SingContent';
 import TopPageContent from './TopPageContent';
+import './Content.css';
 
 const Content = () => {
   return (
