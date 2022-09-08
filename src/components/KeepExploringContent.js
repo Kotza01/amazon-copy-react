@@ -4,8 +4,7 @@ const KeepExploringContent = () => {
   return (
     <div className='keep-exploring-content'>
         <div className='keep-exploring-line'></div>
-        <h6>You`ve reached the end. Keep exploring!</h6>
-        <div className='keep-exploring-line'></div>
+        <span>You`ve reached the end. Keep exploring!</span>
     </div>
   )
 }

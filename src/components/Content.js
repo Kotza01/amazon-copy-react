@@ -5,6 +5,7 @@ import MerchandiseContent from './MerchandiseContent';
 import RefreshHome from './RefreshHome';
 import ShopContent from './ShopContent';
 import SingContent from './SingContent';
+import TopPageContent from './TopPageContent';
 
 const Content = () => {
   return (
@@ -16,8 +17,7 @@ const Content = () => {
         <MerchandiseContent/>
         <KeepExploringContent/>
         <ExploreDepartementContent/>
-        <RefreshHome/>
-        <RefreshHome/>
+        <TopPageContent/>
     </div>
   )
 }

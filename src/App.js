@@ -5,6 +5,8 @@ import {
   QueryClient,
   QueryClientProvider
   } from '@tanstack/react-query';
+import Footer from './components/Footer';
+import RefreshHome from './components/RefreshHome';
 
   const queryClient = new QueryClient();
 
@@ -15,6 +17,7 @@ function App() {
       <div className="App">
         <Header/>
         <Content/>
+        <Footer/>
       </div>
     </QueryClientProvider>
   );

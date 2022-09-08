@@ -10,6 +10,8 @@ const RefreshHome = () => {
     console.log(results, isLoading, error);
     return (
     <div className='refresh-home'>
+        <div className='refresh-home-background'>
+        </div>
         <div className='refresh-home-products'>
             <div className='refresh-home-container'>
                 <div className='refresh-home-carroussel'>

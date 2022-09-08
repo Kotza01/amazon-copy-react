@@ -38,25 +38,26 @@ html {
 
   font-size: 16px;
   font-family: 'Arsenal', sans-serif;
-  
-  scroll-behavior: smooth;
+
+  scroll-behavior: auto;
 }
 *, *:before, *:after {
 box-sizing: inherit;
 }
 
-img{
+img {
   width: 100%;
   height: auto;
   background-size: cover;
   border-radius: 5px;
 }
 
-body{
+body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0px important!;
 }
 
 /* ********** Component ********** */
@@ -230,10 +231,23 @@ body{
   position: relative;
 
   width: 100%;
-  height: 350px;
+  min-height: 435px;
+  max-height: 700px;
+  display: flex;
+  justify-content: center;
   
+  background-color: var(--bg-content);
+}
+
+.refresh-home-background {  
+  min-width: 380px;
+  max-width: 414px;
+  min-height: 360px;
+  max-height: 390px;
+
   background-image: url("https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71uIwGsOQpL._SR1236,1080_.jpg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .refresh-home-products {
@@ -293,10 +307,6 @@ body{
   padding: 15px;
 }
 
-.content-sing {
-  margin-top: 75px;
-}
-
 .content-sing h4, .content-sing h6{
   font-weight: lighter;
 }
@@ -317,12 +327,17 @@ body{
 }
 
 .content-shop {
+  display: flex;
+  justify-content: center;
   margin-top: 5px;
   padding: 0;
+
+  background-color: var(--bg-content);
 }
 
 .content-shop img {
-  width: auto;
+  min-width: 380px;
+  max-width: 414px;
   height: 150px;
   margin: 0;
   border-radius: 0px;
@@ -331,7 +346,7 @@ body{
 /*Styles for Merchandise Content*/
 .merchandise-content {
   width: 100%;
-  height: 60vh;
+  height: auto;
   margin-top: 5px;
   padding: 15px;
   background-color: var(--header-font-color);
@@ -341,7 +356,6 @@ body{
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 48%);
-  grid-template-rows: repeat(2, 200px);
   justify-content: center;
   justify-items: center;
   gap: 10px;
@@ -353,25 +367,36 @@ body{
 
 /*Style keep exploring*/
 .keep-exploring-content {
+  position: relative;
   width: 100%;
   height: 30px;
-  display: grid;
-  grid-template-columns: 22% 56% 22%;
+  display: flex;
+  justify-content: center;
   align-items: center;
 
   background-color: var(--bg-content);
 }
 
-.keep-exploring-content h6 {
-  font-weight: 300;
-  font-size: .8rem;
+.keep-exploring-content span {
+  position: absolute;
+  z-index: 2;
+
+  width: fit-content;
   margin: 0;
   margin-bottom: 1px;
+  padding: 0 10px;
+
+  font-weight: 300;
+  font-size: .8rem;
   color: #8184a6;
+
+  background-color: var(--bg-content);
 }
 
 .keep-exploring-line {
-  width: 96%;
+  position: absolute;
+  position: 1;
+  width: 100%;
   height: 1px;
   border-top: 0.5px solid #8184a6;
 }
@@ -380,7 +405,6 @@ body{
 
 .explore-department-content {
   width: 100%;
-  height: 380px;
   padding: 15px;
 
   background-color: var(--header-font-color);
@@ -390,7 +414,6 @@ body{
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 48%);
-  grid-template-rows: repeat(3,88px);
   gap: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -405,6 +428,175 @@ body{
   font-weight: 200;
 }
 
+/*Style top page*/
+.top-page-content {
+  width: 100%;
+  height: 50px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--bg-2-color);
+}
+
+.top-page-content i {
+  font-size: .7rem;
+  color: var(--bg-content);
+}
+
+.top-page-content h6 {
+  color: var(--bg-content);
+  font-size: .7rem;
+}
+
+.footer {
+  width: 100%;
+}
+
+.footer-nav {
+  width: 100%;
+  padding: 9%;
+  padding-left: 4%;
+  padding-right: 2%;
+  padding-top: 5%;
+
+  opacity: 98%;
+  background-color: var(--bg-1-color);
+}
+
+.footer-options {
+  display: grid;
+  grid-template-columns: 45% 50%;
+  grid-template-rows: auto;
+  gap: 2%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-options li {
+  list-style-type: none;
+  padding: 0;
+  width: 95%;
+  height: 35px;
+
+  color: var(--header-font-color);
+}
+
+.footer-options li h6 {
+  margin: 0;
+  padding: 0;
+
+  font-size: .95rem;
+  color: #f2ffec;
+}
+
+.footer-options li:last-child h6 {
+  margin-top: 10px;
+}
+
+/*Styles footer privacty*/
+.footer-privacity {
+  margin-top: -2px;
+  color: #c5bdad;
+  height: auto;
+  
+  background-color: #0d141e;
+}
+
+.footer-state {
+  width: 390px;
+  height: 12vh;
+  padding-top: 7vw;
+  padding-bottom: 7vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 20% repeat(2, 35%);
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.footer-state .language {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.language .bi {
+  font-size: 1rem;
+}
+
+.language h6 {
+  font-size: .8rem;
+  margin: 0;
+  margin-left: 8px;
+}
+
+.footer-state .currency {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  font-size: .8rem;
+}
+
+.footer-state .state {
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-state .state img {
+  width: 18px;
+  height: 18px;
+  border-radius: 0px;
+}
+
+.footer-state .state h6 {
+  margin: 0;
+  margin-left: 6px;
+}
+
+.footer-privacity h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 3vh;
+
+  color: var(--header-font-color);
+}
+
+.footer-condition {
+  width: 312px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2vw;
+  display: grid;
+  grid-template-columns: 35% 30% 35%;
+  justify-content: center;
+  justify-items: center;
+}
+
+.footer-condition h6 {
+  font-size: .6rem;
+}
+
+
+.reserve-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5vw;
+  margin-bottom: 1px;
+
+  font-size: .6rem;
+}
 /* ********** Utilities ********** */
 
 /* ********** Site Styles ********** */
