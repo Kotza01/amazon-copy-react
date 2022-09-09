@@ -1,6 +1,6 @@
 import React from 'react'
 
-const KeepExploringContent = () => {
+const KeepExploring = () => {
   return (
     <div className='keep-exploring-content'>
         <div className='keep-exploring-line'></div>
@@ -9,4 +9,4 @@ const KeepExploringContent = () => {
   )
 }
 
-export default KeepExploringContent
+export default KeepExploring;

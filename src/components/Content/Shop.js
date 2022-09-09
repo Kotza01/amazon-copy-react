@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ShopContent = ({url}) => {
+const Shop = ({url}) => {
   return (
     <div className='content-seccion content-shop'>
         <img src={url} alt='Computers'/>
@@ -8,4 +8,4 @@ const ShopContent = ({url}) => {
   )
 }
 
-export default ShopContent;
+export default Shop;

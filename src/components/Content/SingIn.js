@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SingContent = () => {
+const SingIn = () => {
   return (
     <div className='content-seccion content-sing'>
         <h4>Sing in for the best experiencie</h4>
@@ -10,4 +10,4 @@ const SingContent = () => {
   )
 }
 
-export default SingContent;
+export default SingIn;

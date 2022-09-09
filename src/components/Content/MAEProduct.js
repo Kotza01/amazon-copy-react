@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MAEContentProduct = ({styles, url, name}) => {
+const MAEProduct = ({styles, url, name}) => {
   return (
     <div className={styles}>
         <img src={url} alt={name}/>
@@ -8,4 +8,4 @@ const MAEContentProduct = ({styles, url, name}) => {
     </div>
   )
 }
-export default MAEContentProduct;
+export default MAEProduct;
