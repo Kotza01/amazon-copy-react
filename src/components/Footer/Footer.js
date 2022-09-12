@@ -17,7 +17,7 @@ const Footer = () => {
                 <li><h6>Sell products on Amazon</h6></li>
                 <li><h6>Returns</h6></li>
                 <li><h6>Your Recalls and Product safety Alerts</h6></li>
-                <li><h6></h6></li>
+                <li><h6>-</h6></li>
                 <li><h6>Customer Service</h6></li>
             </ul>
         </div>

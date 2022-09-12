@@ -1,10 +1,11 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom';
 
 const Category = () => {
   return (
     <div className='header-container header-category'>
       <div className='carrousel'>
-        <h6>Deals</h6>
+        <h6><NavLink to={"/product"} >Deals</NavLink></h6>
         <h6>Amazon Basics</h6>
         <h6>Best Sellers</h6>
         <h6>Livestreams</h6>

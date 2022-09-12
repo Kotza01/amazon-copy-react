@@ -1,4 +1,8 @@
 /* ********** Custom Properties ********** */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 ;
+}
+
 @font-face{
   font-family: "ember";
   font-style: normal;
@@ -12,7 +16,7 @@
   font-weight: normal;
   src: url("./assets/Amazon-Ember-Medium.woff")format("woff");
 }
-:root{ 
+:root{
   --header-font-color : #ffffff;
   --bg-1-color: #232f3e;
   --bg-2-color: #37475a;
@@ -22,6 +26,8 @@
   --bg-deliver : #37475A;
   --bg-content  : #d5dbdb;
   --button-sing : #ffd814;
+  --product-letter : #37403e;
+  --orange-dark: #ed381c;
   --step--2: clamp(0.91rem, calc(0.90rem + 0.07vw), 0.96rem);
   --step--1: clamp(1.09rem, calc(1.06rem + 0.16vw), 1.20rem);
   --step-0: clamp(1.31rem, calc(1.26rem + 0.28vw), 1.50rem);

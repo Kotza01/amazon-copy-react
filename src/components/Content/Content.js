@@ -8,10 +8,10 @@ import SingContent from './SingIn';
 import TopPageContent from './TopPageContent';
 import './Content.css';
 
-const Content = () => {
+const Content = ({clickProduct}) => {
   return (
     <div className='content'>
-        <RefreshHome/>
+        <RefreshHome clickProduct={clickProduct}/>
         <SingContent/>
         <ShopContent url={'https://m.media-amazon.com/images/I/51GxHAoKfsL._SR1242,450_.jpg'}/>
         <ShopContent url={'https://m.media-amazon.com/images/I/51dtbAAbcML._SR1242,450_.jpg'}/>
