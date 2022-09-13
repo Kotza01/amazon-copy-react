@@ -1,15 +1,16 @@
 import React from 'react'
 import { useFetch } from '../../hooks/useFetch';
+import {useParams} from 'react-router-dom';
 import ProductItem from './ProductItem';
 import './ProductPage.css';
 import ShopButton from './ShopButton';
 import Sponsored from './Sponsored';
 
-const ProductPage = ({id, addToCart, openModal}) => {
-  let url = `https://api.escuelajs.co/api/v1/products/${id}`;
-  console.log(url);
+const ProductPage = ({addToCart, openModal}) => {
+
+  let {idProduct} = useParams();
+  let url = `https://api.escuelajs.co/api/v1/products/${idProduct}`;
   const {results} = useFetch(url,'product');
-  console.log(results);
 
   if(results===undefined || Object.hasOwn(results,'error')) {
     return (

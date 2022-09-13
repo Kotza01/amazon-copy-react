@@ -64,6 +64,7 @@
 }
 
 .shopping-cart-empty {
+    height: 22vh;
     display: flex;
     align-items: center;
     justify-content: center;

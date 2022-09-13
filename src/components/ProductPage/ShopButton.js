@@ -39,7 +39,7 @@ const ShopButton = ({results, addToCart, openModal}) => {
             </div>
           </div>
         </div>}
-        <button onClick={()=> addToCart(results, countCart) } >Add to Cart</button>
+        <button onClick={()=> addToCart({...results, price : results.price-30}, countCart) } >Add to Cart</button>
         <button onClick={openModal} style={{backgroundColor:"#ffa41c"}}>Buy Now</button>
         <div className='shop-button-security'>
           <i className="bi bi-lock-fill"></i>
