@@ -2,11 +2,13 @@ import React from 'react'
 import primerLogo from '../../assets/prime-video.png';
 
 const Sponsored = ({results}) => {
+
   return (
     <>
       <div className='sponsored' >
             <div className='sponsored-image'>
-                <img src={results.images[0]} alt='product' />
+                <img src={typeof(results.images)=== 'object' ? 
+                results.images[0] : results.images} alt='product' />
             </div>
             <div className='sponsored-title'>
                 <h6>{results.title}</h6>

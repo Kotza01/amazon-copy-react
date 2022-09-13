@@ -5,7 +5,7 @@ const Slider = ({images}) => {
   const [slideIndex, setSlideIndex] = useState(1);
 
     let refContainerSlider = useRef();
-    
+
     const handleDotContainer = (event) => {
       let scrollY = refContainerSlider.current.scrollLeft;
       if(scrollY>358 && scrollY<361){

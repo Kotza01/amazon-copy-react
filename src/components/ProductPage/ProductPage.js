@@ -5,10 +5,10 @@ import './ProductPage.css';
 import ShopButton from './ShopButton';
 import Sponsored from './Sponsored';
 
-const ProductPage = ({id}) => {
+const ProductPage = ({id, addToCart}) => {
   let url = `https://api.escuelajs.co/api/v1/products/${id}`;
-  
-  const {results} = useFetch(url);
+  console.log(url);
+  const {results} = useFetch(url,'product');
   console.log(results);
 
   if(results===undefined || Object.hasOwn(results,'error')) {
@@ -22,7 +22,7 @@ const ProductPage = ({id}) => {
     <div className='product-page'>
         {results && <Sponsored results={results}/>}
         {results && <ProductItem results={results}/>}
-        {results && <ShopButton results={results}/>}
+        {results && <ShopButton results={results} addToCart={addToCart}/>}
     </div>
   )
 }

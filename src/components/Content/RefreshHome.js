@@ -6,7 +6,7 @@ const RefreshHome = ({clickProduct}) => {
     
     const url = "https://api.escuelajs.co/api/v1/categories/2/products";
     const {results} = useFetch(url, "refreshHome");
-
+    
     return (
     <div className='refresh-home'>
         <div className='refresh-home-background'>
