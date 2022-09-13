@@ -10,7 +10,7 @@ const Header = ({countCart}) => {
     <div className='header'>
         <Home countCart={countCart}/>
         <Search/>
-        <Category/>
+        <Category />
         <Deliver/>
     </div>
   )

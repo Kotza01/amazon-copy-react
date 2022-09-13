@@ -8,8 +8,9 @@ const ListProductPage = ({clickProduct}) => {
       
     let {idCategory} = useParams();
     let url = `https://api.escuelajs.co/api/v1/categories/${idCategory}/products`;
-    const {results} = useFetch(url, "listProducts");
+    const {results} = useFetch(url, `listProducts${idCategory}`);
     console.log(results);
+
     return (
     <div className='list-products'>
         <h6>Popular Shopping Ideas</h6>

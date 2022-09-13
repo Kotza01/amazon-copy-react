@@ -2,7 +2,7 @@ import React from 'react'
 import ListItemProducts from '../ListProductPage/ListItemProducts';
 import './ShoppingCart.css'
 
-const ShoppingCart = ({productCart}) => {
+const ShoppingCart = ({productCart, deleteOne, deleteAll}) => {
 
   if(productCart.totalPrice ===0){
     return(
@@ -26,8 +26,8 @@ const ShoppingCart = ({productCart}) => {
                 <ListItemProducts  description={el.description} idProduct={el.id} image={el.images[0]} clickProduct={()=>{}}/>
                 <h6 className='count'>Count: {el.count}</h6>
                 <div className='buttons'>
-                    <button>Delete One</button>
-                    <button style={{backgroundColor: "#e67a00"}} >Delete All</button>
+                    <button onClick={() =>deleteOne(el.id)} >Delete One</button>
+                    <button onClick={ ()=>{deleteAll(el.id)} } style={{backgroundColor: "#e67a00"}} >Delete All</button>
                 </div>
             </div>
             ))}

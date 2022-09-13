@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const ShopButton = ({results, addToCart}) => {
+const ShopButton = ({results, addToCart, openModal}) => {
 
   const [modalClick, setModalClick] = useState(false);
   const [countCart, setCountCart] = useState(1);
@@ -40,7 +40,7 @@ const ShopButton = ({results, addToCart}) => {
           </div>
         </div>}
         <button onClick={()=> addToCart(results, countCart) } >Add to Cart</button>
-        <button style={{backgroundColor:"#ffa41c"}}>Buy Now</button>
+        <button onClick={openModal} style={{backgroundColor:"#ffa41c"}}>Buy Now</button>
         <div className='shop-button-security'>
           <i className="bi bi-lock-fill"></i>
           <h6>Secure transaction</h6>

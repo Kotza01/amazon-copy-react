@@ -2,11 +2,10 @@ import React from 'react'
 import {NavLink} from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
 
-const Category = () => {
+const Category = ({handleIdCategory}) => {
 
   let url = "https://api.escuelajs.co/api/v1/categories";
   const {results} = useFetch(url, 'category');
-  console.log(results);
   
   return (
     <div className='header-container header-category'>
