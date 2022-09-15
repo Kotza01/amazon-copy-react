@@ -1,0 +1,22 @@
+@keyframes openModal {
+    0%{
+        background-color: rgba(0, 0, 0, .2);
+    }
+
+    100%{
+        background-color: rgba(0, 0, 0, .8);
+    }
+}
+
+.dark-background {
+    position: absolute;
+    top: 99px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 990;
+
+    background-color: rgba(0, 0, 0, .8);
+
+    animation: openModal .2s ease-out;
+}

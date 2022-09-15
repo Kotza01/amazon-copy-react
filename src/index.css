@@ -18,8 +18,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 :root{
   --header-font-color : #ffffff;
+  --light-gray : #f3f3f3;
   --bg-1-color: #232f3e;
   --bg-2-color: #37475a;
+  --bg-3-color: #131921; 
+  --bg-4-color: #232f3e;
   --color-item-cart: #ff990c;
   --search-font: #b0afaf;
   --search-c : #fcbb6a;
@@ -69,5 +72,21 @@ body {
 /* ********** Component ********** */
 
 /* ********** Utilities ********** */
+.light-font {
+  color: #bdc0c3;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.bold-font {
+  font-family: "ember-medium";
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 600;
+  margin-top: -7px;
+}
+
+
+
 
 /* ********** Site Styles ********** */
