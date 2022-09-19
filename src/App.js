@@ -14,6 +14,7 @@ import Modal from './components/Modal/Modal';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import HeaderWeb from './components/HeaderWeb/HeaderWeb';
 import DarkBackground from './components/DarkBackground/DarkBackground';
+import ContentWeb from './components/ContentWeb/ContentWeb';
   const queryClient = new QueryClient();
 
   const initialProductCart = {
@@ -153,6 +154,7 @@ function App() {
           modalHoverReturn={modalHoverReturn}
           setModalHoverReturn={setModalHoverReturn}
           />
+          <ContentWeb/>
         {darkBackground && <DarkBackground/>} 
         {modalHoverLanguage&&<DarkBackground/>}
         {modalHoverReturn&&<DarkBackground/>}

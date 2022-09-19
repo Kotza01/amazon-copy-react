@@ -4,7 +4,8 @@ span {
 
 /*Style for Header Web*/
 .header-web {
-    width: 100%;
+    max-width: 100%;
+    min-width: 1015px;
     height: 60px;
     display: grid;
     grid-template-columns: 232px 1fr 376px;
@@ -247,7 +248,8 @@ span {
 }
 
 .header-web-category {
-    width: 100%;
+    max-width: 100%;
+    min-width: 1015px;
     height: 39px;
     display: flex;
     padding: 7px;

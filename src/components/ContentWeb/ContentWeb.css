@@ -1,0 +1,162 @@
+.content-web {
+    background-color: var(--bg-content);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    min-width: 1015px;
+}
+
+/**/
+.content-web-container {
+    position: relative;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-principals-options {
+    position: absolute;
+    top: 250px;
+    z-index: 20;
+
+    max-width: 1520px;
+    min-width: 980px;
+    height: 440px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(280px, 350px));
+    
+    padding-right: 20px;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    margin-right: auto;
+    gap: 20px;
+}
+
+.position-relativee {
+    position: initial;
+    margin-right: 0px;
+}
+
+.container-principals-options .option {
+    height: 420px;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 40px 320px 20px;
+
+    background-color: #fff;
+}
+
+.container-principals-options .image-small {
+    grid-template-rows: 60px 300px 20px;
+}
+
+.container-principals-options .image-small .option-content img {
+    height: 283px;
+}
+
+.container-principals-options .option-header span {
+    font-size: larger;
+    font-family: "ember-medium";
+    font-weight: 600;
+}
+
+.container-principals-options .option-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 2px;
+}
+
+.container-principals-options .gaming {
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.container-principals-options .gaming img {
+    height: 110px;
+    object-fit: cover;
+}
+
+.container-principals-options .by-category {
+    display: flex;
+    height: 130px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(244, 244, 245);
+}
+
+.container-principals-options .by-category img {
+    height: 80px;
+    object-fit: contain;
+}
+
+.container-principals-options .option-content-grid-element div span {
+    font-size: .7rem;
+    font-weight: 600;
+}
+
+.container-principals-options .option-footer span {
+    font-size: small;
+    font-weight: 600;
+    color: rgb(61, 61, 243);
+}
+
+.container-principals-options .one-item img{
+    border-radius: 0;
+    height: 303px;
+    object-fit: cover;
+}
+
+@media screen and (max-width : 1240px) {
+    
+.container-principals-options {
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(306px, 380px));
+}
+}
+
+/*Styles for Container Second*/
+.container-second {
+
+    margin-top: 190px;
+    width: 96%;
+    max-width: 1460px;
+    min-width: 976px;
+    height: 280px;
+    overflow: hidden;
+    padding: 15px;
+    padding-top: 1.6rem;
+
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.margin-top {
+    margin-top: 0;
+}
+
+.container-second h4 {
+    font-family: "ember-medium";
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+@media screen and (max-width : 1536px) {
+    
+    .container-second {
+        width: 97%;
+    }
+}
+
+@media screen and (max-width : 1180px) {
+    
+    .container-second {
+        width: 96%;
+    }
+}
