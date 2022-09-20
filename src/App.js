@@ -15,6 +15,7 @@ import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import HeaderWeb from './components/HeaderWeb/HeaderWeb';
 import DarkBackground from './components/DarkBackground/DarkBackground';
 import ContentWeb from './components/ContentWeb/ContentWeb';
+import FooterWeb from './components/FooterWeb/FooterWeb';
   const queryClient = new QueryClient();
 
   const initialProductCart = {
@@ -158,6 +159,7 @@ function App() {
         {darkBackground && <DarkBackground/>} 
         {modalHoverLanguage&&<DarkBackground/>}
         {modalHoverReturn&&<DarkBackground/>}
+        <FooterWeb/>
       </div>
     </QueryClientProvider>
   )

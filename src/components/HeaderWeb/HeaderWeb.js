@@ -128,7 +128,7 @@ const HeaderWeb = ({modalHoverLanguage,
                         <div className='modal-hover-container modal-container-return'>
                             <i className="bi bi-caret-up-fill"></i>
                             <div className='modal-return-header'>
-                                <button>Sing in</button>
+                                <button className='btn-yellow'>Sing in</button>
                                 <div>
                                     <span>New customer?</span>
                                     <span>Start here</span>

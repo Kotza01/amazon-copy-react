@@ -160,3 +160,52 @@
         width: 96%;
     }
 }
+
+/*Style for container history*/
+.container-history {
+    width: 100%;
+    margin-top: 5px;
+
+    background-color: #fff;
+}
+
+.history-content {
+    margin-top: 40px;
+    border: 1px solid var(--bg-content);
+    border-radius: .3rem;
+}
+
+.history-sing-in {
+    width: 98%;
+    border-top: 1px solid var(--bg-content);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+    margin-bottom: 25px;
+}
+
+.history-sing-in span {
+    font-weight: 600;
+}
+
+.history-sing-in>:nth-child(1) {
+    font-size: smaller;
+    margin-bottom: 3px;
+}
+
+.history-sing-in button {
+    width: 230px;
+    height: 28px;
+    font-weight: 600;
+    font-family: "ember";
+}
+
+.history-sing-in>:nth-child(3) span {
+    font-size: .7rem;
+}
+
+.history-sing-in>:nth-child(3)>:nth-child(2) {
+    margin-left: 5px;
+}
+

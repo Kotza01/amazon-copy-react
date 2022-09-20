@@ -86,7 +86,33 @@ body {
   margin-top: -7px;
 }
 
+.blue-font {
+  color: #6161a7;
+  cursor: pointer;
+}
 
+.blue-font:hover {
+  color: var(--orange-dark);
+}
 
+.btn-yellow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  border: 1px solid var(--bg-deliver);
+  border-radius: .2rem;
+  padding: 5px;
+
+  font-size: smaller;
+
+  background: rgb(255,245,198);
+  background: linear-gradient(180deg, rgba(255,245,198,1) 0%, rgba(236,212,93,1) 47%, rgba(240,210,61,1) 100%);
+}
+
+.btn-yellow:hover {
+  background: rgb(237,227,182);
+  background: linear-gradient(180deg, rgba(237,227,182,1) 0%, rgba(224,204,100,1) 47%, rgba(232,203,59,1) 100%);
+}
 
 /* ********** Site Styles ********** */

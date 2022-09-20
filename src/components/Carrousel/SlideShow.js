@@ -19,8 +19,7 @@ const SlideShow = ({
 	const siguiente = useCallback(() => {
 		// Comprobamos que el slideshow tenga elementos
 		if(slideshow.current.children.length > 0){
-			console.log('Siguiente')
-            console.log(slideshow.current);
+
 			if(littleCarrousel){
 				let maxTranslate = 0;
 				for(let i =0; i<slideshow.current.children.length; i++){
@@ -37,7 +36,6 @@ const SlideShow = ({
 
 				if(sizeTranslate>maxTranslate){
 					if(translateTopSeller===maxTranslate) {
-						console.log("entro");
 						// Move the slideshow
 						slideshow.current.style.transform = `translateX(-${translateTopSeller+30}px)`;
 						const transicionTwo = () => {
@@ -65,7 +63,6 @@ const SlideShow = ({
 			} else {
 				// Obtenemos el primer elemento del slideshow.
 				const primerElemento = slideshow.current.children[0];
-				console.log(primerElemento);
 
 				// Establecemos la transicion para el slideshow.
 				slideshow.current.style.transition = `${velocidad}ms ease-out all`;
@@ -93,7 +90,7 @@ const SlideShow = ({
 	}, [velocidad, littleCarrousel, translateTopSeller, setTranslateTopSeller]);
 	
 	const anterior = () => {
-		console.log('Anterior');
+		
 		if(slideshow.current.children.length > 0){
 			if(littleCarrousel){ 
 				if(translateTopSeller===0) {

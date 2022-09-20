@@ -1,0 +1,120 @@
+.pagination- {
+    width: inherit;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.pagination-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination-header>:nth-child(1) span {
+    font-size: large;
+    font-family: "ember-medium";
+    font-weight: 600;
+}
+
+.pagination-header>:nth-child(2) span {
+    font-size: .92rem;
+    font-weight: 600;
+}
+
+.pagination-header>:nth-child(2)>:nth-child(2) {
+    margin-left: 15px;
+    border-left: 1px solid #3e3ee8;
+    padding-left: 10px;
+}
+
+.pagination-content {
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    min-height: 370px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-content button {
+    width: 34px;
+    height: 37px;
+    border-radius: .3rem;
+    border: 1px solid var(--bg-content);
+    box-shadow: 1px 1px 5px var(--bg-content);
+
+    background-color: #fff;
+}
+
+.pagination-content button .bi {
+    color: #6b6666;
+    font-size: 1rem;
+}
+
+.pagination-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 160px);
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.pagination-products {
+    cursor: pointer;
+    height: 426px;
+}
+
+.pagination-products img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.pagination-product-description span {    
+    
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    max-height: 160px;
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    font-size: .95rem;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.pagination-product-stars {
+    display: flex;
+    align-items: center;
+}
+
+.pagination-product-stars>:nth-child(2) {
+    display: flex;
+    align-items: center;
+}
+
+.pagination-product-stars>:nth-child(2) span {
+    margin-left:5px;
+    font-size: .7rem;
+    margin-top: 2px;
+}
+
+.pagination-product-price {
+    display: flex;
+    align-items: center;
+}
+
+.pagination-product-price>:nth-child(1) {
+    font-size: .7rem;
+    margin-top: -3px;
+}
+.pagination-product-price>:nth-child(2) {
+    font-size: medium;
+    font-weight: 600;
+}
+
+.pagination-product-shipping span {
+    font-size: .7rem;
+    font-weight: 600;
+}
