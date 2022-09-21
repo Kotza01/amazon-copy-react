@@ -2,18 +2,26 @@ import './HeaderWeb.css';
 import logo from '../../assets/logo-3.png';
 import UsaFlag from '../../assets/america-flag.png';
 import ModalWeb from '../ModalWeb/ModalWeb';
+import { useFetch } from '../../hooks/useFetch';
+import {NavLink} from 'react-router-dom';
 
 const HeaderWeb = ({modalHoverLanguage, 
                     setModalHoverLanguage, 
                     setDarkBackground,
                     modalHoverReturn,
-                    setModalHoverReturn}) => {
+                    setModalHoverReturn,
+                    goToHome
+                }) => 
+{
+    
+    let url = "https://api.escuelajs.co/api/v1/categories";
+    const {results} = useFetch(url, 'category');                        
 
   return (
     <>
     <div className='header-web'>
         <div className='header-web-start'>
-            <div className='header-web-start-logo border-fff'>
+            <div className='header-web-start-logo border-fff' onClick={goToHome} >
                 <img src={logo} alt='amazon-logo '/>
             </div>
             <div className='header-web-start-deliver border-fff'>
@@ -190,21 +198,11 @@ const HeaderWeb = ({modalHoverLanguage,
             <i className="bi bi-list"></i>
             <span>All</span>
         </div>
-        <div className='border-fff'>
-            <span>Today`s Deals</span>
-        </div>
-        <div className='border-fff'>
-            <span>Customer Service</span>
-        </div>
-        <div className='border-fff'>
-            <span>Registry</span>
-        </div>
-        <div className='border-fff'>
-            <span>Gift Card</span>
-        </div>
-        <div className='border-fff'>
-            <span>Sell</span>
-        </div>
+        {results && results.map((el,index) => (
+            <div className='border-fff' key={index}>
+                <span><NavLink to={`/list-products/${el.id}`} >{el.name}</NavLink></span>
+            </div>
+        ))}
     </div>
     </>
   )

@@ -3,7 +3,7 @@ import logo from '../../assets/logo-3.png';
 import Nav from './Nav';
 import {useNavigate} from 'react-router-dom'
 
-const Home = ({countCart}) => {
+const Home = ({countCart, goToHome}) => {
 
   const [selectNav, setSelectNav] = useState("");
   const slideIn = 'slide-in';
@@ -16,10 +16,6 @@ const Home = ({countCart}) => {
     } else {
       setSelectNav(slideIn);
     }
-  }
-
-  const goToHome = () => {
-    navigate('/');
   }
 
   const goToShoppingCart = () => {

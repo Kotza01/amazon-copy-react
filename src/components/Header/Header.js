@@ -5,10 +5,10 @@ import Category from './Category';
 import Deliver from './Deliver';
 import './Header.css';
 
-const Header = ({countCart}) => {
+const Header = ({countCart, goToHome}) => {
   return (
     <div className='header'>
-        <Home countCart={countCart}/>
+        <Home countCart={countCart} goToHome={goToHome}/>
         <Search/>
         <Category />
         <Deliver/>

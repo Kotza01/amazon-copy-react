@@ -16,6 +16,8 @@ import HeaderWeb from './components/HeaderWeb/HeaderWeb';
 import DarkBackground from './components/DarkBackground/DarkBackground';
 import ContentWeb from './components/ContentWeb/ContentWeb';
 import FooterWeb from './components/FooterWeb/FooterWeb';
+import ListProductPageWeb from './components/ListProductPageWeb/ListProductPageWeb';
+import ProductPageWeb from './components/ProductPageWeb/ProductPageWeb';
   const queryClient = new QueryClient();
 
   const initialProductCart = {
@@ -126,12 +128,16 @@ function App() {
     return check;
   };
 
+  const goToHome = () => {
+      navigate('/');
+  } 
+
   if(window.mobileCheck()) {
     return (
       <QueryClientProvider client={queryClient}>
         <div className="App">
         {modalSuccessfully && <Modal closeModal={()=> setModalSuccessfully(false)}/>}
-        <Header countCart={productCart.count}/>
+        <Header countCart={productCart.count} goToHome={goToHome} />
           <Routes>
               <Route index element={<Content clickProduct={clickProduct}/>} />
               <Route path='/product/:idProduct' element={<ProductPage addToCart={addToCart} openModal={openModal} />} />
@@ -154,8 +160,14 @@ function App() {
           setDarkBackground={setDarkBackground}
           modalHoverReturn={modalHoverReturn}
           setModalHoverReturn={setModalHoverReturn}
-          />
-          <ContentWeb/>
+          goToHome={goToHome}
+        />
+        <Routes>
+            <Route index element={<ContentWeb/>} />
+            <Route path='/product/:idProduct' element={<ProductPageWeb addToCart={addToCart} openModal={openModal} />} />
+            <Route path='/list-products/:idCategory' element={<ListProductPageWeb clickProduct={clickProduct} />} />
+            <Route path='/shopping-cart' element={<ShoppingCart productCart={productCart} deleteOne={deleteOne} deleteAll={deleteAll}/>} />
+        </Routes>
         {darkBackground && <DarkBackground/>} 
         {modalHoverLanguage&&<DarkBackground/>}
         {modalHoverReturn&&<DarkBackground/>}

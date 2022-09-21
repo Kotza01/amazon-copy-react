@@ -115,4 +115,8 @@ body {
   background: linear-gradient(180deg, rgba(237,227,182,1) 0%, rgba(224,204,100,1) 47%, rgba(232,203,59,1) 100%);
 }
 
+.box-shadow { 
+  box-shadow: 1px 1px 5px var(--bg-content);
+}
+
 /* ********** Site Styles ********** */
