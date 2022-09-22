@@ -18,6 +18,7 @@ import ContentWeb from './components/ContentWeb/ContentWeb';
 import FooterWeb from './components/FooterWeb/FooterWeb';
 import ListProductPageWeb from './components/ListProductPageWeb/ListProductPageWeb';
 import ProductPageWeb from './components/ProductPageWeb/ProductPageWeb';
+import ShoppingCartWeb from './components/ShoppingCartWeb/ShoppingCartWeb';
   const queryClient = new QueryClient();
 
   const initialProductCart = {
@@ -47,8 +48,10 @@ function App() {
   }
 
   const addToCart = (product, count) => {
-    
+    console.log(product);
+    console.log(count);
     if(productCart.totalPrice===0){
+      console.log("Carro vacío");
       setProductCart(
         {
           ...productCart, 
@@ -58,17 +61,21 @@ function App() {
         }
       )  
     } else {
+      
       const emptyProduct = productCart.cart.find((item) => product.id ===item.id);
       if(emptyProduct){
+        console.log("Tenía el producto");
         setProductCart(
           {
-            ...productCart, cart: productCart.cart.map(item => product.id ===item.id ? {...item, count : item.count+1}: item),
+            ...productCart, cart: productCart.cart.map(item => product.id ===item.id ? {...item, count : item.count+count}: item),
              totalPrice : productCart.totalPrice + (emptyProduct.price*count),
              count : productCart.count + count
           }
         ) 
       } else {
+        console.log("No tenía el producto");
         setProductCart(
+          
           {
             ...productCart, cart: [...productCart.cart, {...product, count :count}],
              totalPrice : productCart.totalPrice + (product.price*count),
@@ -154,6 +161,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className='App' onClick={(e)=> handleDarkBackground(e)}>
+        {modalSuccessfully && <Modal closeModal={()=> setModalSuccessfully(false)}/>}
         <HeaderWeb 
           setModalHoverLanguage={setModalHoverLanguage} 
           modalHoverLanguage={modalHoverLanguage} 
@@ -161,12 +169,13 @@ function App() {
           modalHoverReturn={modalHoverReturn}
           setModalHoverReturn={setModalHoverReturn}
           goToHome={goToHome}
+          countCart={productCart.count}
         />
         <Routes>
             <Route index element={<ContentWeb/>} />
             <Route path='/product/:idProduct' element={<ProductPageWeb addToCart={addToCart} openModal={openModal} />} />
             <Route path='/list-products/:idCategory' element={<ListProductPageWeb clickProduct={clickProduct} />} />
-            <Route path='/shopping-cart' element={<ShoppingCart productCart={productCart} deleteOne={deleteOne} deleteAll={deleteAll}/>} />
+            <Route path='/shopping-cart' element={<ShoppingCartWeb productCart={productCart} deleteOne={deleteOne} deleteAll={deleteAll}/>} />
         </Routes>
         {darkBackground && <DarkBackground/>} 
         {modalHoverLanguage&&<DarkBackground/>}

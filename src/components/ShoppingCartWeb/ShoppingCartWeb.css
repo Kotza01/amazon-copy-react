@@ -34,24 +34,50 @@
     color: #e67a00;
 }
 
-.shopping-cart>:nth-child(3)>:nth-child(1) {
-    font-weight: 400;
-    color: var(--bg-deliver);
+.shopping-cart-web-items {
+    max-width: 1500px;
+    min-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
+    justify-content: space-evenly;
+    gap: 5px;
 }
 
-.shopping-cart>:nth-child(3) .shopping-cart-item {
-    margin-bottom: 10px;
+.shopping-cart-web-item {
+    max-width: 300px;
+    min-width: 250px;
+    padding: 5px;
+    border: 1px solid #ecefef;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.shopping-cart>:nth-child(3) .shopping-cart-item .count {
-    font-weight: 400;
+.shopping-cart-web-item .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 } 
 
-.shopping-cart>:nth-child(3) .shopping-cart-item .buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.shopping-cart-web-item .buttons button {
+    width: 70%;
+    padding: 5px;
+    border: 0;
+    margin-bottom: 5px;
+    border-radius: 2rem;
+
+    font-family: "ember";
+    font-size: smaller;
+    font-weight: bold;
+
+    background-color: var(--button-sing);
 }
+
+.shopping-cart-web-item .buttons button:hover {
+    opacity: .8;
+}
+
 
 .shopping-cart>:nth-child(3) .shopping-cart-item .buttons button {
     border: 0;
@@ -61,28 +87,6 @@
     font-weight: 400;
 
     background-color: var(--color-item-cart);
-}
-
-.shopping-cart-web-item .web-list-star {
-    display: flex;
-    align-items: center;
-}
-
-.shopping-cart-web-item .web-list-star .product-item-header-star .bi {
-    font-size: .95rem;
-}
-
-.shopping-cart-web-item .web-list-star>:nth-child(2) .bi {
-    font-size: .6rem;
-    color: #615959;
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
-.shopping-cart-web-item .web-list-star>:nth-child(2) span {
-    font-size: .9rem;
-    color: #7e7373;
-    font-weight: 600;
 }
 
 .shopping-cart-empty {

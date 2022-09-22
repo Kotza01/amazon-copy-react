@@ -3,19 +3,25 @@ import logo from '../../assets/logo-3.png';
 import UsaFlag from '../../assets/america-flag.png';
 import ModalWeb from '../ModalWeb/ModalWeb';
 import { useFetch } from '../../hooks/useFetch';
-import {NavLink} from 'react-router-dom';
+import {NavLink, useNavigate} from 'react-router-dom';
 
 const HeaderWeb = ({modalHoverLanguage, 
                     setModalHoverLanguage, 
                     setDarkBackground,
                     modalHoverReturn,
                     setModalHoverReturn,
-                    goToHome
+                    goToHome,
+                    countCart
                 }) => 
 {
     
-    let url = "https://api.escuelajs.co/api/v1/categories";
-    const {results} = useFetch(url, 'category');                        
+  let url = "https://api.escuelajs.co/api/v1/categories";
+  const navigate = useNavigate();
+  const {results} = useFetch(url, 'category');                        
+
+  const goToShoppingCart = () => {
+    navigate('/shopping-cart');
+    }
 
   return (
     <>
@@ -184,9 +190,9 @@ const HeaderWeb = ({modalHoverLanguage,
                 <span  className='light-font' style={{color:"#fff"}}>Returns</span>
                 <span className='bold-font' >& Orders</span>
             </div>
-            <div className='header-web-end-cart border-fff'>
+            <div className='header-web-end-cart border-fff' onClick={goToShoppingCart} >
                 <div>
-                    <span>0</span>
+                    <span>{countCart}</span>
                     <i className="bi bi-cart3"></i> 
                 </div>
                 <span className='bold-font'>Cart</span>

@@ -9,7 +9,6 @@ import Pagination from '../Pagination/Pagination';
 
 const ContentWeb = () => {
 
-  console.log("Hola");
   return (
     <div className='content-web'>
         <div className='content-web-container'>

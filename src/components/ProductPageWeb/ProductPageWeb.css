@@ -1,0 +1,584 @@
+span {
+    font-weight: 600;
+}
+
+.product-page-web {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-page-web-header {
+    width: 100%;
+    height: 55px;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    justify-content: center;
+
+    background-color: #f7f8f8;
+}
+
+.product-page-web-header-content {
+    width: 1185px;
+    height: 55px;
+    display: grid;
+    grid-template-columns: 65px 872px 215px;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.product-page-web-header-content>:nth-child(1) {
+    width: 100%;
+    height: 55px;
+    padding: 3px;
+    object-fit: contain;
+}
+
+.product-page-web-header-name {
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+
+.product-page-web-header-name span {
+    font-size: smaller;
+    font-weight: 600;
+}
+
+.product-page-web-header-star {
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+}
+
+.product-page-web-header-star .product-item-header-star .bi {
+    font-size: 1rem;
+}
+
+.product-page-web-header-star>:nth-child(2) span {
+    font-size: .75rem;
+    margin-left: 5px;
+    color: var(--orange-dark);
+}
+
+.product-page-web-header-price {
+    margin-left: 20px;
+}
+
+.product-page-web-header-price span {
+    color: #cc321b;
+}
+
+.product-page-web-content {
+    min-width: 1000px;
+    max-width: 1500px;
+    padding: 0 18px 18px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.product-page-web-content-left {
+    position: sticky;
+    top: 0px;
+
+    max-width: 468px;
+    min-width: 307px;
+    margin-right: 2vw;
+    display: flex;
+}
+
+.product-page-web-content-img-left {
+    width: 40px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-horizontal-carrousel {
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-horizontal-carrousel div {
+    margin-bottom: 5px;
+    border: 1px solid #b1a5a5;
+    box-shadow: 1px 1px 2px rgb(187, 187, 172),
+                3px 3px 5px rgb(229, 235, 45),
+                -1px -1px 2px rgb(185, 185, 172),
+                -3px -3px 5px rgb(229, 235, 45);
+}
+
+.product-page-web-content-img-right {
+    padding-left: 4px;
+    height: 549px;
+}
+
+.product-page-web-content-img-right div {
+    display: flex;
+    align-items: center;
+    height: 549px;
+
+    background-color: #f7f8f8;
+}
+
+.product-page-web-content-right {
+    max-width: 966px;
+    min-width: 635px;
+    display: grid;
+    grid-template-columns: 1fr 244px;
+}
+
+.product-page-web-content-description {
+    padding-right: 5.5%;
+}
+
+.product-page-web-content-description-xbox-store span {
+    font-size: .95rem;
+}
+
+.small-size {
+    width: 25px;
+    height: 25px;
+}
+
+.product-page-web-content-description-title span {
+    font-size: x-large; 
+    letter-spacing: .4px;
+    color: #524c4c;
+}
+
+.product-page-web-content-description-ratings {
+    display: flex;
+    align-items: center;
+    margin-top: -3px;
+}
+
+.product-page-web-content-description-ratings .product-item-header-star .bi {
+    font-size: 1rem;
+}
+
+.product-page-web-content-description-ratings>:nth-child(2) .bi {
+    margin-left: 8px;
+    
+    font-size: .5rem;
+    color: #695e5e;
+}
+
+.product-page-web-content-description-ratings>:nth-child(2) span {
+    font-size: .9rem;
+    margin-left: 20px;
+}
+
+.product-page-web-content-description-choice {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.product-page-web-content-description-choice>:nth-child(1) {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 2px 8px;
+    
+    background-color: var(--bg-4-color);
+}
+
+.product-page-web-content-description-choice>:nth-child(1)::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    right: 0;
+    top: 0;
+
+    display: block;
+    width: 33px;
+    height: 23px;
+    margin-right: -8px;
+
+    background-color: var(--bg-4-color);
+
+    transform: skewX(-30deg);
+} 
+
+.product-page-web-content-description-choice>:nth-child(1) span {
+    color: #fff;
+    font-size: .8rem;
+}
+
+.product-page-web-content-description-choice>:nth-child(1)>:nth-child(2) {
+    color: var(--orange-dark);
+    margin-left: 5px;
+}
+
+.product-page-web-content-description-choice>:nth-child(2) {
+    margin-left: 20px;
+}
+
+.product-page-web-content-description-choice>:nth-child(2) span {
+    font-size: .9rem;
+}
+
+.product-page-web-content-description-choice>:nth-child(2)>:nth-child(2) {
+    font-size: .75rem;
+}
+
+.product-page-web-content-description-price {
+    padding-top: 20px;
+    border-top: 1px solid #e9efef;
+}
+
+.product-page-web-content-description-fees {
+    margin-top: 5px;
+}
+
+.product-page-web-content-description-fees div {
+    display: flex;
+    align-items: center;
+}
+
+.product-page-web-content-description-fees>:nth-child(1) span {
+    font-size: .9rem;
+    color: #6e6464;
+    letter-spacing: .2px;
+}
+
+.product-page-web-content-description-fees>:nth-child(1) {
+    position: relative;
+}
+
+.product-page-web-content-description-fees>:nth-child(1) .bi {
+    color: #6e6464;
+    font-size: .5rem;
+    margin-left: 5px;
+}
+
+.product-page-web-content-description-fees>:nth-child(2) img {
+    position: absolute;
+    
+    width: 65px;
+    margin-top: 10px;
+    margin-left: -4px;
+}
+
+.product-page-web-content-description-fees>:nth-child(2)>:nth-child(2) {
+    margin-left: 61px;
+    font-size: 1.15rem;
+}
+
+.product-page-web-content-description-fees>:nth-child(2)>:nth-child(3) {
+    font-size: .85rem;
+    margin-left: 8px;
+    margin-top: 3px;
+}
+
+.product-page-web-content-description-feature {
+    margin-top: 10px;
+}
+
+.product-page-web-content-description-feature .text- {
+    display: flex;
+    align-items: center;
+}
+
+.product-page-web-content-description-feature>:nth-child(1) {
+    margin-bottom: 7px;
+}
+
+.product-page-web-content-description-feature .text- span {
+    font-size: .9rem;
+}
+
+.product-page-web-content-description-feature .text->:nth-child(1) {
+    color: #767070;
+    margin-right: 5px;
+}
+
+.product-page-web-content-description-feature .carrousel-vertical-img {
+    display: flex;
+    margin-top: 8px;
+
+    cursor: pointer;
+}
+
+.product-page-web-content-description-feature .carrousel-vertical-img div {
+    width: 38px;
+    border: 1px solid #ded6d6;
+    margin-right: 10px;
+}
+
+.product-page-web-content-description-feature .size- div {
+    margin-top: 10px;
+}
+
+.product-page-web-content-description-feature .size- div span {
+    color: #767070;
+}
+
+.product-page-web-content-description-feature .size- select option {
+    background-color: #f7f2f2;
+    border: 1px solid blue;
+}
+
+.product-page-web-content-description-feature ul {
+    margin-top: 10px;
+    padding: 0;
+}
+
+.product-page-web-content-description-feature ul li {
+    list-style-type: none;
+    margin-bottom: 5px;
+    font-family: "ember";
+    font-weight: 600;
+    color: #3f3939;
+}
+
+.product-page-web-content-buy {
+  padding-top: 10px;  
+}
+
+.product-page-web-content-buy-card {
+   padding: 15px;
+   padding-top: 18px;
+   border: 1px solid #e1d2d2; 
+   border-radius: .4rem;
+}
+
+.product-page-web-content-buy-card-fees {
+    margin-top: 10px;
+}
+
+.product-page-web-content-buy-card-fees div {
+    display: flex;
+    align-items: center;
+}
+
+.product-page-web-content-buy-card-fees div span {
+    font-size: .9rem;
+    color: #6c6464;
+}
+
+.product-page-web-content-buy-card-fees div .bi {
+    display: block;
+    font-size: .5rem;
+    color: #767070;
+    margin-left: 5px;
+    margin-top: -2px;
+}
+
+.product-page-web-content-buy-card-delivery {
+    margin-top: 10px;
+
+}
+
+.product-page-web-content-buy-card-delivery div {
+    display: flex;
+    align-items: center;
+}
+
+.product-page-web-content-buy-card-delivery span {
+    font-size: .9rem;
+}
+
+.product-page-web-content-buy-card-delivery>:nth-child(1)>:nth-child(2) {
+    margin-left: 4px;
+    font-family: "ember-medium";
+    font-weight: 600;
+}
+
+.product-page-web-content-buy-card-delivery>:nth-child(2) {
+    margin-top: 10px;
+}
+
+.product-page-web-content-buy-card-delivery>:nth-child(2) span {
+    font-size: .75rem;
+}
+
+.product-page-web-content-buy-card-delivery>:nth-child(2) .bi {
+    font-size: .8rem;
+    color: #4f4848;
+    margin-right: 7px;
+}
+
+.product-page-web-content-buy-card-stock div {
+    margin-top: 10px;
+}
+
+.product-page-web-content-buy-card-stock div span {
+    color: #a02815;
+}
+
+.product-page-web-content-buy-card-stock select {
+    margin-top: 10px;
+    padding: 2px;
+    font-size: .7rem;
+}
+
+.product-page-web-content-buy-card-buttons button {
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 1rem;
+    border: 0px solid ;
+    padding: 6px;
+    
+    font-size: small;
+    font-family: "ember";
+    font-weight: 600;
+
+    background-color: var(--color-item-cart);
+}
+
+.product-page-web-content-buy-card-buttons>:nth-child(1):hover {
+    background-color: #efca15;
+}
+
+.product-page-web-content-buy-card-buttons>:nth-child(1) {
+    background-color: var(--button-sing);
+}
+
+.product-page-web-content-buy-card-buttons>:nth-child(2):hover {
+    background-color: #e09b3b;
+}
+
+.product-page-web-content-buy-card-security>:nth-child(1) {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.product-page-web-content-buy-card-security>:nth-child(1) .bi {
+    font-size: 1rem;
+    color: #ab9d9d;
+}
+
+.product-page-web-content-buy-card-security>:nth-child(1) span {
+    font-size: .9rem;
+    color: #918585;
+    letter-spacing: .4px;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+
+.product-page-web-content-buy-card-security>:nth-child(2) {
+    margin-top: 8px;
+}
+
+.product-page-web-content-buy-card-security>:nth-child(2) div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 90%;
+}
+
+.product-page-web-content-buy-card-security>:nth-child(2) div span {
+    font-size: .8rem;
+}
+
+.product-page-web-content-buy-card-security>:nth-child(2) div>:nth-child(1) {
+    color: #8c8282;
+}
+
+.product-page-web-content-buy-card-returns {
+    margin-top: 10px;
+}
+
+.product-page-web-content-buy-card-returns div span {
+    font-size: .95rem;
+}
+
+.product-page-web-content-buy-card-returns div>:nth-child(2) {
+    margin-left: 5px;
+}
+
+.product-page-web-content-buy-card-returns div .bi {
+    font-size: .5rem;
+    color: #524c4c;
+    margin-left: 10px;
+    margin-top: -2px;
+}
+
+.product-page-web-content-buy-card-add-list {
+    border-top: 1px solid #f1e9e9;
+    margin-top: 4px;
+    padding-top: 13px;
+}
+
+.product-page-web-content-buy-card-add-list button {
+    border-radius: .2rem;
+    border: 1px solid #a49c9c;
+    width: 100%;
+    padding: 4px 12px;
+    display: flex;
+    justify-content: flex-start;
+
+    font-size: smaller;
+    color: #000;
+
+    background-color: #f3f3f3;
+}
+
+.product-page-web-content-buy-prime {
+    margin-top: 15px;
+    padding: 10px 10px;
+    border: 1px solid #e1d2d2;
+    border-radius: .1rem;
+}
+
+.product-page-web-content-buy-prime-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.product-page-web-content-buy-prime-img img {
+    width: 50%;
+}
+
+.product-page-web-content-buy-prime-title span {
+    display: -webkit-box;
+    line-clamp: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    
+    font-size: small;
+}
+
+.product-page-web-content-buy-prime-star {
+    display: flex;
+    align-items: center;
+}
+
+.product-page-web-content-buy-prime-star .product-item-header-star .bi {
+    font-size: 1rem;
+}
+
+.product-page-web-content-buy-prime-star span {
+    display: block;
+    margin-left: 5px;
+    
+    font-size: smaller;
+    font-weight: 100;
+
+}
+
+.product-page-web-content-buy-prime-price {
+    display: flex;
+    align-items: center;
+}
+
+.price-style-one span {
+    color: #a02815;
+}
+
+.product-page-web-content-buy-prime-price img {
+    width: 50px;
+    margin-left: 7px;
+}
