@@ -1,6 +1,8 @@
-import React, { useRef, useState } from 'react'
+import React, {useState } from 'react'
 import { useEventListener } from 'usehooks-ts';
 import { useFetch } from '../../hooks/useFetch';
+import Error from '../Error/Error';
+import Loader from '../Loader/Loader';
 import './Pagination.css'
 
 const Pagination = () => {
@@ -9,7 +11,7 @@ const Pagination = () => {
     const [resize, setResize] = useState(false);
 
     let url = `https://api.escuelajs.co/api/v1/categories/2/products`;
-    const {results} = useFetch(url, `listProducts2`);
+    const {results, error, isLoading} = useFetch(url, `listProducts2`);
 
     let productsWidth = 0;
     let productCount = 0;
@@ -44,14 +46,28 @@ const Pagination = () => {
     }
 
     const handleResize = () => {
-        newPages= Math.ceil(results.length / Math.floor((window.innerWidth-157)/160));
-        if(newPages !== pages && window.innerWidth>1024) {
-            if(resize) setResize(false);
-            else setResize(true);
+        if(results){
+            newPages= Math.ceil(results.length / Math.floor((window.innerWidth-157)/160));
+            if(newPages !== pages && window.innerWidth>1024) {
+                if(resize) setResize(false);
+                else setResize(true);
+            }   
         }
     }
     
     useEventListener('resize', handleResize);
+
+    if(isLoading) {
+        return(
+            <Loader/>
+        )
+    }
+
+    if(error) {
+        return (
+            <Error error={error}/>
+        )
+    }
     
     if(results){
         countOfPagination();

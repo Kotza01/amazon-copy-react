@@ -19,6 +19,7 @@ import FooterWeb from './components/FooterWeb/FooterWeb';
 import ListProductPageWeb from './components/ListProductPageWeb/ListProductPageWeb';
 import ProductPageWeb from './components/ProductPageWeb/ProductPageWeb';
 import ShoppingCartWeb from './components/ShoppingCartWeb/ShoppingCartWeb';
+import PageError from './components/PageError/PageError';
   const queryClient = new QueryClient();
 
   const initialProductCart = {
@@ -150,6 +151,7 @@ function App() {
               <Route path='/product/:idProduct' element={<ProductPage addToCart={addToCart} openModal={openModal} />} />
               <Route path='/list-products/:idCategory' element={<ListProductPage clickProduct={clickProduct}/>} />
               <Route path='/shopping-cart' element={<ShoppingCart productCart={productCart} deleteOne={deleteOne} deleteAll={deleteAll}/>} />
+              <Route path="*" element={<PageError/>} />
           </Routes>
           <Footer/>
         </div>
@@ -176,6 +178,7 @@ function App() {
             <Route path='/product/:idProduct' element={<ProductPageWeb addToCart={addToCart} openModal={openModal} />} />
             <Route path='/list-products/:idCategory' element={<ListProductPageWeb clickProduct={clickProduct} />} />
             <Route path='/shopping-cart' element={<ShoppingCartWeb productCart={productCart} deleteOne={deleteOne} deleteAll={deleteAll}/>} />
+            <Route path="*" element={<PageError/>} />
         </Routes>
         {darkBackground && <DarkBackground/>} 
         {modalHoverLanguage&&<DarkBackground/>}

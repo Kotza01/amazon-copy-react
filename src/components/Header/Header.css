@@ -130,14 +130,19 @@ a {
     
     overflow-x: scroll;
   }
-  
+
+  .header-category .error {
+    height: 36px;
+    width: 98%;
+  }
+
   .header-category::-webkit-scrollbar {
     display: none;
   }
   
   .carrousel {
     position: absolute;
-    width: auto;
+    width: 100%;
     display: flex;
   }
   

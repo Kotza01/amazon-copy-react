@@ -4,6 +4,8 @@ import primeVideo from '../../assets/prime-video.png';
 import {useParams} from 'react-router-dom';
 import logo from '../../assets/logo.png'
 import { useFetch } from '../../hooks/useFetch';
+import Loader from '../Loader/Loader';
+import Error from '../Error/Error';
 
 const ProductPageWeb = ({addToCart, openModal}) => {
 
@@ -21,13 +23,14 @@ const ProductPageWeb = ({addToCart, openModal}) => {
 
   let {idProduct} = useParams();
   let url = `https://api.escuelajs.co/api/v1/products/${idProduct}`;
-  const {results} = useFetch(url,'product');
+  const {results, isLoading, error} = useFetch(url,'product');
 
-  if(results===undefined || Object.hasOwn(results,'error')) {
-    return (
-      <div className='product-page'>
-    </div>
-    )
+  if(isLoading) {
+    return <Loader />
+  }
+
+  if(error) {
+    return <Error error={error} />
   }
 
   return (

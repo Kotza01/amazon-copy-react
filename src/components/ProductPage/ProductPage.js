@@ -5,17 +5,28 @@ import ProductItem from './ProductItem';
 import './ProductPage.css';
 import ShopButton from './ShopButton';
 import Sponsored from './Sponsored';
+import Loader from '../Loader/Loader';
+import Error from '../Error/Error';
 
 const ProductPage = ({addToCart, openModal}) => {
 
   let {idProduct} = useParams();
   let url = `https://api.escuelajs.co/api/v1/products/${idProduct}`;
-  const {results} = useFetch(url,'product');
+  const {results, isLoading, error} = useFetch(url,'product');
 
-  if(results===undefined || Object.hasOwn(results,'error')) {
+  if(isLoading){
+    return(
+      <div className='product-page'>
+        <Loader />
+      </div>
+    )
+  }
+
+  if(error) {
     return (
       <div className='product-page'>
-    </div>
+        <Error error={error}/>
+      </div>
     )
   }
 

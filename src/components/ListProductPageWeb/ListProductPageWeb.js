@@ -3,12 +3,14 @@ import './ListProductPageWeb.css';
 import {useParams} from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
 import ProductPageWeb from './ProductPageWeb';
+import Loader from '../Loader/Loader';
+import Error from '../Error/Error';
 
 const ListProductPageWeb = ({clickProduct}) => {
 
     let {idCategory} = useParams();
     let url = `https://api.escuelajs.co/api/v1/categories/${idCategory}/products`;
-    const {results} = useFetch(url, `listProducts${idCategory}`);
+    const {results, isLoading, error} = useFetch(url, `listProducts${idCategory}`);
 
   return (
     <div className='web-list-products'>
@@ -154,11 +156,15 @@ const ListProductPageWeb = ({clickProduct}) => {
                         <span>Price and other details may vary based on product size and color</span>
                     </div>
                 </div>
+                {isLoading&& <Loader />}
+                {error && <Error error={error} />}
+                {results &&
                 <div className='web-list-products-content-rigth-content'>
-                    {results && results.map((el, index) => (
+                    {results.map((el, index) => (
                         <ProductPageWeb key={index} result={el} clickProduct={clickProduct}  />
-                    )) }
+                    ))} 
                 </div>
+                }
             </section>
         </div>
     </div>

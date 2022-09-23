@@ -39,6 +39,7 @@
   
   .refresh-home-container {
     position: relative;
+
     height: 180px;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -48,6 +49,7 @@
     position: absolute;
   
     display: flex;
+    justify-content: center;
     height: 180px;
   }
   

@@ -97,7 +97,7 @@ const SlideShow = ({
 					slideshow.current.style.transition = `${velocidad}ms ease-out all`;
 					slideshow.current.style.transform = `translateX(30px)`;
 					
-					const timeOut = setTimeout(() => {
+					setTimeout(() => {
 						slideshow.current.style.transition = `${velocidad}ms ease-out all`;
 						slideshow.current.style.transform = `translateX(0)`;
 					}, 500);
